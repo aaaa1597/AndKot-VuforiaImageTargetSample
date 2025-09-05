@@ -926,7 +926,7 @@ AppController::createObservers()
     if (mTarget == IMAGE_TARGET_ID)
     {
         auto imageTargetConfig = vuImageTargetConfigDefault();
-        imageTargetConfig.databasePath = "StonesAndChips.xml";
+        imageTargetConfig.databasePath = "ImageTargets/StonesAndChips.xml";
         imageTargetConfig.targetName = "stones";
         imageTargetConfig.activate = VU_TRUE;
 
@@ -942,7 +942,7 @@ AppController::createObservers()
     {
         auto modelTargetConfig = vuModelTargetConfigDefault();
 
-        modelTargetConfig.databasePath = "VuforiaMars_ModelTarget.xml";
+        modelTargetConfig.databasePath = "ModelTargets/VuforiaMars_ModelTarget.xml";
         modelTargetConfig.targetName = "VuforiaMars_ModelTarget";
         modelTargetConfig.activate = VU_TRUE;
 

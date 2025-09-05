@@ -51,7 +51,7 @@ GLESRenderer::init(AAssetManager* assetManager)
 
     // Load Astronaut model
     {
-        if (!readAsset(assetManager, "Astronaut.obj", data))
+        if (!readAsset(assetManager, "ImageTargets/Astronaut.obj", data))
         {
             return false;
         }
@@ -65,7 +65,7 @@ GLESRenderer::init(AAssetManager* assetManager)
 
     // Load Lander model
     {
-        if (!readAsset(assetManager, "VikingLander.obj", data))
+        if (!readAsset(assetManager, "ModelTargets/VikingLander.obj", data))
         {
             return false;
         }
