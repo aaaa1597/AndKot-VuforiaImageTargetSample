@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                 // Re-load textures in case they got destroyed
                 val astronautbitmap = loadBitmapFromAssets(this@MainActivity, "ImageTargets/Astronaut.jpg")
                 val astronautTexture: ByteBuffer? = astronautbitmap?.let { bitmap ->
-                                                        ByteBuffer.allocate(bitmap.byteCount).apply {
+                                                        ByteBuffer.allocateDirect(bitmap.byteCount).apply {
                                                             bitmap.copyPixelsToBuffer(this)
                                                             rewind()
                                                         }
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
                 val landerbitmap = loadBitmapFromAssets(this@MainActivity, "ModelTargets/VikingLander.jpg")
                 val landerTexture: ByteBuffer? = landerbitmap?.let { bitmap ->
-                                                        ByteBuffer.allocate(bitmap.byteCount).apply {
+                                                        ByteBuffer.allocateDirect(bitmap.byteCount).apply {
                                                             bitmap.copyPixelsToBuffer(this)
                                                             rewind()
                                                         }
