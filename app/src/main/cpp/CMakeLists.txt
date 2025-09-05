@@ -2,13 +2,9 @@ cmake_minimum_required(VERSION 3.22.1)
 
 project("vuforiaimagetargetsample")
 
-message("aaa001 CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
-
 add_library(VUFORIA_LIBRARY SHARED IMPORTED)
 set_target_properties(VUFORIA_LIBRARY PROPERTIES IMPORTED_LOCATION
         ${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libVuforiaEngine.so)
-
-message("aaa002 CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
         AppController.cpp
@@ -17,8 +13,6 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
         GLESRenderer.cpp
         GLESUtils.cpp
         VuforiaWrapper.cpp)
-
-message("aaa003 CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
 
 target_include_directories(vuforiaimagetargetsample PUBLIC include)
 
