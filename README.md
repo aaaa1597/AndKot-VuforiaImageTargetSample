@@ -91,11 +91,11 @@ Still not sure.
 ```
 
 I copied the files under app/src/main/assets, but placing them directly under ImageTargets caused errors.
-Changing the path fixed it.
-¦ This line is crucial when using custom markers, but it's buried in a hard-to-notice spot.
-¦ Putting files under assets means they can't be downloaded or changed dynamically. Maybe that's intentional?
+Changing the path fixed it.  
+※This line is crucial when using custom markers, but it's buried in a hard-to-notice spot.
+※Putting files under assets means they can't be downloaded or changed dynamically. Maybe that's intentional?
 
-« Errors occurred in these project-specific changes:
+↓ Errors occurred in these project-specific changes:
 ```
 app/
 └── src/
