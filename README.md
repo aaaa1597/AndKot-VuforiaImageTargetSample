@@ -136,9 +136,10 @@ Fixing it was a pain. Apparently, it has to be loaded into direct memory.
 ```
 
 First load as a bitmap, then push into a ByteBuffer.
-You have to use allocateDirect(). ¦allocate() won't work since it's not direct memory.
+You have to use allocateDirect().   
+※allocate() won't work since it's not direct memory.
 
-That's it.
+That's it.  
 This was the procedure for running an AR sample with Vuforia.
 
 Not the cleanest source code, I'll admit.
