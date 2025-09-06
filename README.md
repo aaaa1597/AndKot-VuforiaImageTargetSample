@@ -57,8 +57,8 @@ Print target_stones_A4.pdf.
 ## 5. Run it
 Build in Android Studio and run on your phone.
 It'll jump straight to the camera view.
-¦ I removed the splash screen and the Image Target/Model Target selection screen?they were noisy.
-When you point the camera at the printed marker, the 3D character shown in the ggoal imageh will appear.
+※I removed the splash screen and the Image Target/Model Target selection screen?they were noisy.
+When you point the camera at the printed marker, the 3D character shown in the "goal image" will appear.
 ![](https://storage.googleapis.com/zenn-user-upload/7ba378ef9d17-20250906.jpg)
 **I did it!!**
 
