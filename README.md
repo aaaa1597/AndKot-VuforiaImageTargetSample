@@ -120,19 +120,19 @@ Texture loading via Texture.loadTextureFromApk() seems **deprecated**.
 Fixing it was a pain. Apparently, it has to be loaded into direct memory.  
 ↓ **Deprecated code**
 ```diff cpp: VuforiaActivity.cpp(339-340)
-        val astronautTexture = Texture.loadTextureFromApk("Astronaut.jpg", assets)
-        val landerTexture = Texture.loadTextureFromApk("VikingLander.jpg", assets)
+-       val astronautTexture = Texture.loadTextureFromApk("Astronaut.jpg", assets)
+-       val landerTexture = Texture.loadTextureFromApk("VikingLander.jpg", assets)
 ```
 
 ↓ Fixed code
-```cpp: MainActivity.cpp(75-81)
-  val astronautbitmap = loadBitmapFromAssets(this@MainActivity, "ImageTargets/Astronaut.jpg")
-  val astronautTexture: ByteBuffer? = astronautbitmap?.let { bitmap ->
-                                          ByteBuffer.allocateDirect(bitmap.byteCount).apply {
-                                              bitmap.copyPixelsToBuffer(this)
-                                              rewind()
-                                          }
-                                      }
+```diff cpp: MainActivity.cpp(75-81)
++ val astronautbitmap = loadBitmapFromAssets(this@MainActivity, "ImageTargets/Astronaut.jpg")
++ val astronautTexture: ByteBuffer? = astronautbitmap?.let { bitmap ->
++                                         ByteBuffer.allocateDirect(bitmap.byteCount).apply {
++                                             bitmap.copyPixelsToBuffer(this)
++                                             rewind()
++                                         }
++                                     }
 ```
 
 First load as a bitmap, then push into a ByteBuffer.
