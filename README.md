@@ -51,7 +51,7 @@ If you skip this step, you'll get the following error when launching the app:
 
 ## 4. Print the marker
 Markers are located at:
-D:\VuforiaTest\vuforia-sdk-android-10-7-2\samples\vuforia-sample-11-3-4\Media
+The markers are located under vuforia-sample-android-11-3-4/vuforia-sample-11-3-4/Media after extracting vuforia-sample-android-11-3-4.zip.
 Print target_stones_A4.pdf.
 
 ## 5. Run it
@@ -60,7 +60,6 @@ It'll jump straight to the camera view.
 ¦ I removed the splash screen and the Image Target/Model Target selection screen?they were noisy.
 When you point the camera at the printed marker, the 3D character shown in the ggoal imageh will appear.
 ![](https://storage.googleapis.com/zenn-user-upload/7ba378ef9d17-20250906.jpg)
-**© This image right here**
 **I did it!!**
 
 # Gotchas
