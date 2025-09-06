@@ -98,21 +98,21 @@ Changing the path fixed it.
 « Errors occurred in these project-specific changes:
 ```
 app/
-„¤„Ÿ„Ÿ src/
-    „¤„Ÿ„Ÿ main/
-        „¤„Ÿ„Ÿ assets/
-            „¥„Ÿ„Ÿ ImageTargets/
-            „    „¥„Ÿ„Ÿ Astronaut.jpg
-            „    „¥„Ÿ„Ÿ Astronaut.mtl
-            „    „¥„Ÿ„Ÿ Astronaut.obj
-            „    „¥„Ÿ„Ÿ StonesAndChips.dat
-            „    „¤„Ÿ„Ÿ StonesAndChips.xml
-            „¤„Ÿ„Ÿ ModelTargets/
-                „¥„Ÿ„Ÿ VikingLander.jpg
-                „¥„Ÿ„Ÿ VikingLander.mtl
-                „¥„Ÿ„Ÿ VikingLander.obj
-                „¥„Ÿ„Ÿ VuforiaMars_ModelTarget.dat
-                „¤„Ÿ„Ÿ VuforiaMars_ModelTarget.xml
+└── src/
+    └── main/
+        └── assets/
+            ├── ImageTargets/
+            │   ├── Astronaut.jpg
+            │   ├── Astronaut.mtl
+            │   ├── Astronaut.obj
+            │   ├── StonesAndChips.dat
+            │   └── StonesAndChips.xml
+            └── ModelTargets/
+                ├── VikingLander.jpg
+                ├── VikingLander.mtl
+                ├── VikingLander.obj
+                ├── VuforiaMars_ModelTarget.dat
+                └── VuforiaMars_ModelTarget.xml
 ```
 
 4. Texture file wouldn't load...
