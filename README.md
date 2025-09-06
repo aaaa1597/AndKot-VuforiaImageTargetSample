@@ -59,7 +59,7 @@ Build in Android Studio and run on your phone.
 It'll jump straight to the camera view.  
 ※I removed the splash screen and the Image Target/Model Target selection screen?they were noisy.  
 When you point the camera at the printed marker, the 3D character shown in the "goal image" will appear.  
-<img src="https://storage.googleapis.com/zenn-user-upload/7ba378ef9d17-20250906.jpg" width="600" />
+<img src="https://storage.googleapis.com/zenn-user-upload/7ba378ef9d17-20250906.jpg" width="400" />  
 **I did it!!**
 
 # Gotchas
