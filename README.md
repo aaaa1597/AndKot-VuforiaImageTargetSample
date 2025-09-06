@@ -34,7 +34,7 @@ https://github.com/aaaa1597/AndKot-VuforiaImageTargetSample
 
 ## 2. Open the project in Android Studio
 ![](https://storage.googleapis.com/zenn-user-upload/975f44ccec4e-20220624.png)
-Click ÅgOpenÅh
+Click ¬ÅgOpen¬Åh
 
 ![](https://storage.googleapis.com/zenn-user-upload/045aff23fa3e-20220624.png)
 Open the Android project shown above.
@@ -57,10 +57,13 @@ Print target_stones_A4.pdf.
 ## 5. Run it
 Build in Android Studio and run on your phone.
 It'll jump straight to the camera view.
-Å¶ I removed the splash screen and the Image Target/Model Target selection screen?they were noisy.
-When you point the camera at the printed marker, the 3D character shown in the Åggoal imageÅh will appear.
+¬Å¬¶ I removed the splash screen and the Image Target/Model Target selection screen?they were noisy.
+When you point the camera at the printed marker, the 3D character shown in the ¬Åggoal image¬Åh will appear.
 ![alt text](image.png)
-**Å© This image right here**
+**¬Å¬© This image right here**
+
+![](https://storage.googleapis.com/zenn-user-upload/7ba378ef9d17-20250906.jpg =300x)
+**I did it!!**
 
 # Gotchas
 It was tough... I got stuck quite a bit. Leaving notes here in case they help someone.
@@ -92,39 +95,39 @@ Still not sure.
 
 I copied the files under app/src/main/assets, but placing them directly under ImageTargets caused errors.
 Changing the path fixed it.
-Å¶ This line is crucial when using custom markers, but it's buried in a hard-to-notice spot.
-Å¶ Putting files under assets means they can't be downloaded or changed dynamically. Maybe that's intentional?
+¬Å¬¶ This line is crucial when using custom markers, but it's buried in a hard-to-notice spot.
+¬Å¬¶ Putting files under assets means they can't be downloaded or changed dynamically. Maybe that's intentional?
 
-Å´ Errors occurred in these project-specific changes:
+¬Å¬´ Errors occurred in these project-specific changes:
 ```
 app/
-Ñ§ÑüÑü src/
-    Ñ§ÑüÑü main/
-        Ñ§ÑüÑü assets/
-            Ñ•ÑüÑü ImageTargets/
-            Ñ†   Ñ•ÑüÑü Astronaut.jpg
-            Ñ†   Ñ•ÑüÑü Astronaut.mtl
-            Ñ†   Ñ•ÑüÑü Astronaut.obj
-            Ñ†   Ñ•ÑüÑü StonesAndChips.dat
-            Ñ†   Ñ§ÑüÑü StonesAndChips.xml
-            Ñ§ÑüÑü ModelTargets/
-                Ñ•ÑüÑü VikingLander.jpg
-                Ñ•ÑüÑü VikingLander.mtl
-                Ñ•ÑüÑü VikingLander.obj
-                Ñ•ÑüÑü VuforiaMars_ModelTarget.dat
-                Ñ§ÑüÑü VuforiaMars_ModelTarget.xml
+‚Äû¬§‚Äû≈∏‚Äû≈∏ src/
+    ‚Äû¬§‚Äû≈∏‚Äû≈∏ main/
+        ‚Äû¬§‚Äû≈∏‚Äû≈∏ assets/
+            ‚Äû¬•‚Äû≈∏‚Äû≈∏ ImageTargets/
+            ‚Äû¬†   ‚Äû¬•‚Äû≈∏‚Äû≈∏ Astronaut.jpg
+            ‚Äû¬†   ‚Äû¬•‚Äû≈∏‚Äû≈∏ Astronaut.mtl
+            ‚Äû¬†   ‚Äû¬•‚Äû≈∏‚Äû≈∏ Astronaut.obj
+            ‚Äû¬†   ‚Äû¬•‚Äû≈∏‚Äû≈∏ StonesAndChips.dat
+            ‚Äû¬†   ‚Äû¬§‚Äû≈∏‚Äû≈∏ StonesAndChips.xml
+            ‚Äû¬§‚Äû≈∏‚Äû≈∏ ModelTargets/
+                ‚Äû¬•‚Äû≈∏‚Äû≈∏ VikingLander.jpg
+                ‚Äû¬•‚Äû≈∏‚Äû≈∏ VikingLander.mtl
+                ‚Äû¬•‚Äû≈∏‚Äû≈∏ VikingLander.obj
+                ‚Äû¬•‚Äû≈∏‚Äû≈∏ VuforiaMars_ModelTarget.dat
+                ‚Äû¬§‚Äû≈∏‚Äû≈∏ VuforiaMars_ModelTarget.xml
 ```
 
 4. Texture file wouldn't load...
 Texture loading via Texture.loadTextureFromApk() seems **deprecated**.
 Fixing it was a pain. Apparently, it has to be loaded into direct memory.
-Å´ Deprecated code
+¬Å¬´ Deprecated code
 ```diff cpp: VuforiaActivity.cpp(339-340)
         val astronautTexture = Texture.loadTextureFromApk("Astronaut.jpg", assets)
         val landerTexture = Texture.loadTextureFromApk("VikingLander.jpg", assets)
 ```
 
-Å´ Fixed code
+¬Å¬´ Fixed code
 ```cpp: MainActivity.cpp(75-81)
   val astronautbitmap = loadBitmapFromAssets(this@MainActivity, "ImageTargets/Astronaut.jpg")
   val astronautTexture: ByteBuffer? = astronautbitmap?.let { bitmap ->
@@ -136,7 +139,7 @@ Fixing it was a pain. Apparently, it has to be loaded into direct memory.
 ```
 
 First load as a bitmap, then push into a ByteBuffer.
-You have to use allocateDirect(). Å¶allocate() won't work since it's not direct memory.
+You have to use allocateDirect(). ¬Å¬¶allocate() won't work since it's not direct memory.
 
 That's it.
 This was the procedure for running an AR sample with Vuforia.
