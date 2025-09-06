@@ -115,16 +115,16 @@ app/
                 └── VuforiaMars_ModelTarget.xml
 ```
 
-4. Texture file wouldn't load...
-Texture loading via Texture.loadTextureFromApk() seems **deprecated**.
-Fixing it was a pain. Apparently, it has to be loaded into direct memory.
-« Deprecated code
+## 4. Texture file wouldn't load...
+Texture loading via Texture.loadTextureFromApk() seems **deprecated**.  
+Fixing it was a pain. Apparently, it has to be loaded into direct memory.  
+↓ **Deprecated code**
 ```diff cpp: VuforiaActivity.cpp(339-340)
         val astronautTexture = Texture.loadTextureFromApk("Astronaut.jpg", assets)
         val landerTexture = Texture.loadTextureFromApk("VikingLander.jpg", assets)
 ```
 
-« Fixed code
+↓ Fixed code
 ```cpp: MainActivity.cpp(75-81)
   val astronautbitmap = loadBitmapFromAssets(this@MainActivity, "ImageTargets/Astronaut.jpg")
   val astronautTexture: ByteBuffer? = astronautbitmap?.let { bitmap ->
