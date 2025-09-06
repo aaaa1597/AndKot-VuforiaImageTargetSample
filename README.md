@@ -34,21 +34,20 @@ https://github.com/aaaa1597/AndKot-VuforiaImageTargetSample
 
 ## 2. Open the project in Android Studio
 <img src="https://storage.googleapis.com/zenn-user-upload/975f44ccec4e-20220624.png" width="600" />
-![](https://storage.googleapis.com/zenn-user-upload/975f44ccec4e-20220624.png)
 Click "Open"
 
-![](https://storage.googleapis.com/zenn-user-upload/045aff23fa3e-20220624.png)
+<img src="https://storage.googleapis.com/zenn-user-upload/045aff23fa3e-20220624.png" width="600" />
 Open the Android project shown above.  
 Wait until the project finishes loading.
 
 ## 3. Set up authentication info and build
 [Vuforia License Page](https://developer.vuforia.com/vui/develop/licenses)
 
-![](https://storage.googleapis.com/zenn-user-upload/ca8fccbe4230-20220624.png)
+<img src="https://storage.googleapis.com/zenn-user-upload/ca8fccbe4230-20220624.png" width="600" />
 In Android Studio, open AppController.cpp and paste the license key you copied in Step 2 into licenseKey.  
 Then build.
 If you skip this step, you'll get the following error when launching the app:
-![](https://storage.googleapis.com/zenn-user-upload/b71666998388-20220624.png)
+<img src="https://storage.googleapis.com/zenn-user-upload/b71666998388-20220624.png" width="600" />
 
 ## 4. Print the marker
 Markers are located at:  
@@ -60,7 +59,7 @@ Build in Android Studio and run on your phone.
 It'll jump straight to the camera view.  
 ※I removed the splash screen and the Image Target/Model Target selection screen?they were noisy.  
 When you point the camera at the printed marker, the 3D character shown in the "goal image" will appear.  
-![](https://storage.googleapis.com/zenn-user-upload/7ba378ef9d17-20250906.jpg)
+<img src="https://storage.googleapis.com/zenn-user-upload/7ba378ef9d17-20250906.jpg" width="600" />
 **I did it!!**
 
 # Gotchas
