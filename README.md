@@ -12,7 +12,7 @@ I'd previously written this [article](https://zenn.dev/rg687076/articles/3a27d02
 With Android Gradle Plugin now in the 8.x series, older code throws build errors left and right. Even the code on GitHub is broken.
 Glad to see Vuforia is still offering the service, but even their official sample code won't build.
 
-So?I fixed the build and published it on GitHub.
+So?I fixed the build and published it on GitHub.  
 The goal this time was again this
 ![](https://storage.googleapis.com/zenn-user-upload/fd0d9ec59b7e-20220624.png)
 
