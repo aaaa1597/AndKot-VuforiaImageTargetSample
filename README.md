@@ -33,6 +33,7 @@ The goal this time was again this
 https://github.com/aaaa1597/AndKot-VuforiaImageTargetSample
 
 ## 2. Open the project in Android Studio
+<img src="https://storage.googleapis.com/zenn-user-upload/975f44ccec4e-20220624.png" width="300" />
 ![](https://storage.googleapis.com/zenn-user-upload/975f44ccec4e-20220624.png)
 Click "Open"
 
