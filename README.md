@@ -1,6 +1,9 @@
 # Vuforia
-
 [Android][Kotlin]Vuforia][AR] Tried running Vuforia's sample code (Image Target).
+
+# For more details, check out this blog.
+- en: In progress
+- 日本語: [Vuforiaのサンプルコード(Image Targetのみ)を動かしてみた。](https://zenn.dev/rg687076/articles/80f8ddd22f643f)
 
 # Abstract
 - Built and ran the Vuforia sample code.
