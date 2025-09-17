@@ -1,4 +1,4 @@
-# Vuforia
+# Tried running Vuforia's sample code
 [Android][Kotlin]Vuforia][AR] Tried running Vuforia's sample code (Image Target).
 
 # For more details, check out this blog.
